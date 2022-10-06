@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacob LeBaron's Eportfolio</title>
+    <link rel="stylesheet" href="https://use.typekit.net/jso1zrg.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b3f749207d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="nav-container">
+            <nav>
+                <img src="img/Logo-pfp-transp-light.png" class="logo">
+                <ul>
+                    <li><a href="http://">Home</a></li>
+                    <li><a href="http://">About</a></li>
+                    <li><a href="http://">Projects</a></li>
+                    <li><a href="http://">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p><span>Information Systems</span></p>
+                <h1>Jacob LeBaron</h1>
+            </div>
+        </div>
+    </div>
+    <!--about-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="img/pfp.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                    <br>
+                    <div class="tab-titles">
+                        <span class="tab-links active-link" onclick="opentab('code')">Code</span>
+                        <span class="tab-links" onclick="opentab('jobs')">Jobs</span>
+                        <span class="tab-links" onclick="opentab('education')">Education</span>
+                    </div>
+                    <br>
+                    <div class="tab-contents active-tab" id="code">
+                        <ul>
+                            <li><span>C# and Xaml</span><br>Asp.Net Core and MVC</li>
+                            <li><span>HTML,CSS</span><br>Bootstrap</li>
+                            <li><span>MySQL</span><br></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="jobs">
+                        <ul>
+                            <li><span>2017 - 2018</span><br>Green Solutions - Web Developer/Designer Intern</li>
+                            <li><span>2017 - 2019</span><br>Joel P. Jensen - Web Developer/Designer Intern</li>
+                            <li><span>2020 - Current</span><br>Walmart - Team Lead Associate</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021</span><br>AS - Applied Science</li>
+                            <li><span>2023</span><br>BS - Information Systems - App Development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--Projects-->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="projects-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Joel P. Jensen</h2>
+                <p>Adapted a dynamic and interactive website that ensured low traffic, simplistic
+                    page view, and smooth user experience. Revitalized website faculty information and design of the UI on the front-end. Debugged and executed improvements on the website</p>
+                <a href="https://joelpjensen.jordandistrict.org/">Visit site</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-wheat-awn"></i>
+                <h2>Green Solutions Landscaping</h2>
+                <p> Implemented framework through GoDaddy domain service and managed
+                    traffic flow of the website. Open communication with client to adjust and refine the websites clarity
+                    and motive intended for the company.</p>
+                <a href="https://greensolutionsland.com/">Visit site</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>jacoblebaron4@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>(801) 750-4447</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/jacob-lebaron-851592159/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/jakegobogoth/"><i class="fa-brands fa-square-instagram"></i></i></a>
+                </div>
+                <a href="img/Resume 2022.pdf" download class="btn">Download Resume</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
